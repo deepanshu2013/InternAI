@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Recommendations | InternAI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black min-h-screen text-gray-100 flex flex-col items-center p-8">
+
+  <!-- Header -->
+  <header class="w-full max-w-6xl mb-10 flex justify-between items-center 
+    bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-2xl shadow-2xl">
+    <h1 class="text-3xl md:text-4xl font-bold">Internship Recommendations</h1>
+    <a href="students.html" 
+      class="px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 
+      hover:bg-gray-700/80 rounded-xl shadow-md font-semibold 
+      transition transform hover:scale-105">
+      Edit Profile
+    </a>
+  </header>
+
+  <!-- Subtext -->
+  <p class="text-gray-400 mb-8 text-center max-w-3xl">
+    Based on your profile and skills, here are the most relevant internship opportunities from the 
+    <span class="text-pink-400 font-semibold">PM Internship Scheme</span> and other reputed platforms.
+  </p>
+
+  <!-- Recommendations Grid -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+
+    <!-- Card 1 -->
+    <div class="bg-white/10 backdrop-blur-lg border border-green-500/50 
+      rounded-2xl shadow-2xl p-6 transform transition hover:-translate-y-2 hover:shadow-xl">
+      <img src="https://img.icons8.com/color/96/source-code.png" alt="Software" class="w-16 h-16 mb-4">
+      <h2 class="text-xl font-semibold mb-2">Software Development Intern</h2>
+      <p class="text-gray-400 mb-3">Company: PM Internship Scheme</p>
+      <span class="px-3 py-1 text-sm rounded-full bg-green-500/30 text-green-300 font-semibold">
+        Highly Recommended
+      </span>
+      <p class="mt-4 text-gray-300">
+        Strong match with your skills: <span class="font-semibold">JavaScript, React, Problem Solving</span>.
+      </p>
+      <p class="mt-2 text-gray-400 text-sm">
+        Suggested to learn: <span class="text-pink-400">Node.js, Git</span>
+      </p>
+      <button class="mt-4 w-full py-2 bg-green-600 hover:bg-green-500 
+        rounded-xl font-semibold transition transform hover:scale-105 applyBtn" 
+        data-title="Software Development Intern" data-company="PM Internship Scheme">
+        Apply Now
+      </button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white/10 backdrop-blur-lg border border-yellow-500/50 
+      rounded-2xl shadow-2xl p-6 transform transition hover:-translate-y-2 hover:shadow-xl">
+      <img src="https://img.icons8.com/color/96/combo-chart.png" alt="Data" class="w-16 h-16 mb-4">
+      <h2 class="text-xl font-semibold mb-2">Data Analyst Intern</h2>
+      <p class="text-gray-400 mb-3">Company: DataCorp</p>
+      <span class="px-3 py-1 text-sm rounded-full bg-yellow-500/30 text-yellow-300 font-semibold">
+        Average Match
+      </span>
+      <p class="mt-4 text-gray-300">
+        Good match with your skills: <span class="font-semibold">Python, SQL, Excel</span>.
+      </p>
+      <p class="mt-2 text-gray-400 text-sm">
+        Suggested to learn: <span class="text-pink-400">SQL, Tableau</span>
+      </p>
+      <button class="mt-4 w-full py-2 bg-yellow-600 hover:bg-yellow-500 
+        rounded-xl font-semibold transition transform hover:scale-105 applyBtn" 
+        data-title="Data Analyst Intern" data-company="DataCorp">
+        Apply Now
+      </button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white/10 backdrop-blur-lg border border-green-500/50 
+      rounded-2xl shadow-2xl p-6 transform transition hover:-translate-y-2 hover:shadow-xl">
+      <img src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="AI" class="w-16 h-16 mb-4">
+      <h2 class="text-xl font-semibold mb-2">AI/ML Intern</h2>
+      <p class="text-gray-400 mb-3">Company: AI Labs</p>
+      <span class="px-3 py-1 text-sm rounded-full bg-green-500/30 text-green-300 font-semibold">
+        Highly Recommended
+      </span>
+      <p class="mt-4 text-gray-300">
+        Strong match with your skills: <span class="font-semibold">Python, Machine Learning, TensorFlow</span>.
+      </p>
+      <p class="mt-2 text-gray-400 text-sm">
+        Suggested to learn: <span class="text-pink-400">TensorFlow, NLP</span>
+      </p>
+      <button class="mt-4 w-full py-2 bg-green-600 hover:bg-green-500 
+        rounded-xl font-semibold transition transform hover:scale-105 applyBtn" 
+        data-title="AI/ML Intern" data-company="AI Labs">
+        Apply Now
+      </button>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white/10 backdrop-blur-lg border border-red-500/50 
+      rounded-2xl shadow-2xl p-6 transform transition hover:-translate-y-2 hover:shadow-xl">
+      <img src="https://img.icons8.com/color/96/security-checked.png" alt="Security" class="w-16 h-16 mb-4">
+      <h2 class="text-xl font-semibold mb-2">Cybersecurity Intern</h2>
+      <p class="text-gray-400 mb-3">Company: Microsoft</p>
+      <span class="px-3 py-1 text-sm rounded-full bg-red-500/30 text-red-300 font-semibold">
+        Low Match
+      </span>
+      <p class="mt-4 text-gray-300">
+        Matches partially with your skills: <span class="font-semibold">Networking Basics, Linux</span>.
+      </p>
+      <p class="mt-2 text-gray-400 text-sm">
+        Suggested to learn: <span class="text-pink-400">Linux, Cryptography</span>
+      </p>
+      <button class="mt-4 w-full py-2 bg-red-600 hover:bg-red-500 
+        rounded-xl font-semibold transition transform hover:scale-105 applyBtn" 
+        data-title="Cybersecurity Intern" data-company="Microsoft">
+        Apply Now
+      </button>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white/10 backdrop-blur-lg border border-yellow-500/50 
+      rounded-2xl shadow-2xl p-6 transform transition hover:-translate-y-2 hover:shadow-xl">
+      <img src="https://img.icons8.com/color/96/marketing.png" alt="Marketing" class="w-16 h-16 mb-4">
+      <h2 class="text-xl font-semibold mb-2">Digital Marketing Intern</h2>
+      <p class="text-gray-400 mb-3">Company: Meta</p>
+      <span class="px-3 py-1 text-sm rounded-full bg-yellow-500/30 text-yellow-300 font-semibold">
+        Average Match
+      </span>
+      <p class="mt-4 text-gray-300">
+        Matches with your communication & analytics skills.
+      </p>
+      <p class="mt-2 text-gray-400 text-sm">
+        Suggested to learn: <span class="text-pink-400">SEO, Google Analytics</span>
+      </p>
+      <button class="mt-4 w-full py-2 bg-yellow-600 hover:bg-yellow-500 
+        rounded-xl font-semibold transition transform hover:scale-105 applyBtn" 
+        data-title="Digital Marketing Intern" data-company="Meta">
+        Apply Now
+      </button>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white/10 backdrop-blur-lg border border-green-500/50 
+      rounded-2xl shadow-2xl p-6 transform transition hover:-translate-y-2 hover:shadow-xl">
+      <img src="https://img.icons8.com/color/96/design.png" alt="Design" class="w-16 h-16 mb-4">
+      <h2 class="text-xl font-semibold mb-2">UI/UX Design Intern</h2>
+      <p class="text-gray-400 mb-3">Company: Figma</p>
+      <span class="px-3 py-1 text-sm rounded-full bg-green-500/30 text-green-300 font-semibold">
+        Highly Recommended
+      </span>
+      <p class="mt-4 text-gray-300">
+        Strong match with your skills: <span class="font-semibold">Creativity, Wireframing</span>.
+      </p>
+      <p class="mt-2 text-gray-400 text-sm">
+        Suggested to learn: <span class="text-pink-400">Prototyping, Accessibility</span>
+      </p>
+      <button class="mt-4 w-full py-2 bg-green-600 hover:bg-green-500 
+        rounded-xl font-semibold transition transform hover:scale-105 applyBtn" 
+        data-title="UI/UX Design Intern" data-company="Figma">
+        Apply Now
+      </button>
+    </div>
+
+  </div>
+
+  <!-- JS to handle Apply buttons -->
+  <script>
+    const applyButtons = document.querySelectorAll(".applyBtn");
+
+    applyButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const internship = {
+          title: btn.getAttribute("data-title"),
+          company: btn.getAttribute("data-company")
+        };
+        localStorage.setItem("selectedInternship", JSON.stringify(internship));
+        window.location.href = "apply.html";
+      });
+    });
+  </script>
+
+</body>
+</html>

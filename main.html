@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Internship Recommendation Engine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@tailwindcss/forms"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="main.js" defer></script>
+  <!-- <script src="lang.js" defer></script> -->
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-8 py-4 text-gray-200">
+    <h1 class="text-2xl font-bold tracking-wide" data-translate>InternAI</h1>
+    <div class="flex items-center space-x-4">
+      <a href="login.html" class="px-4 py-2 bg-gray-800 rounded-lg shadow-md hover:bg-gray-700 hover:scale-105 transition" data-translate>Login</a>
+      <a href="signup.html" class="px-4 py-2 bg-pink-600 rounded-lg shadow-md hover:bg-pink-500 hover:scale-105 transition" data-translate>Sign Up</a>
+
+      <!-- Language Dropdown -->
+      <select id="languageSelect" class="bg-gray-800 text-gray-200 px-3 py-2 rounded-lg">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+      </select>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex-1 flex flex-col items-center justify-center text-center text-gray-100 px-6">
+    <h2 class="text-4xl md:text-6xl font-extrabold drop-shadow-xl mb-6" data-translate>
+      Find Your Perfect Internship
+    </h2>
+    <p class="text-lg md:text-2xl max-w-2xl mb-8 text-gray-400" data-translate>
+      An AI-powered engine to recommend the best internships from <span class="text-pink-400 font-semibold">PM Internship Scheme</span> and beyond.
+    </p>
+    <div class="space-x-6">
+      <a href="signup.html" class="px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-2xl text-lg shadow-xl transform hover:scale-110 transition" data-translate>
+        Get Started
+      </a>
+      <a href="login.html" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-2xl text-lg shadow-xl transform hover:scale-110 transition" data-translate>
+        Login
+      </a>
+    </div>
+  </section>
+
+  <!-- 3D Canvas -->
+  <canvas id="bgCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 py-4 bg-black bg-opacity-70 text-sm" data-translate>
+    © 2025 InternAI. All rights reserved.
+  </footer>
+
+</body>
+</html>

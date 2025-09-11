@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder | InternAI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="resume.js" defer></script>
+</head>
+<body class="bg-gray-950 min-h-screen text-gray-100 flex flex-col items-center p-6">
+
+  <!-- Back Button on Form Page -->
+  <button id="formBackBtn" class="absolute top-4 left-4 px-3 py-2 rounded-lg bg-gray-800 text-white font-semibold hover:brightness-110 transition">
+    ← Back
+  </button>
+
+  <!-- Header -->
+  <header class="w-full max-w-5xl mb-10 text-center">
+    <h1 class="text-4xl font-bold mb-2 text-pink-500">Resume Builder</h1>
+    <p class="text-gray-400">Create a professional resume tailored to your skills and experience.</p>
+  </header>
+
+  <!-- Form Section -->
+  <div id="formSection" class="w-full max-w-3xl bg-gray-900/70 p-8 rounded-2xl shadow-lg">
+    <h2 class="text-2xl font-semibold mb-4">Enter Your Details</h2>
+    <form id="resumeForm" class="space-y-4">
+      <!-- Personal Info -->
+      <input type="text" id="fullName" placeholder="Full Name" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700" required>
+      <input type="email" id="email" placeholder="Email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700" required>
+      <input type="text" id="phone" placeholder="Phone Number" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+      <input type="text" id="location" placeholder="Location / City" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+
+      <!-- Education -->
+      <h3 class="text-xl font-semibold mt-4">Education</h3>
+      <input type="text" id="school10" placeholder="10th School Name" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+      <input type="number" id="percent10" placeholder="10th Percentage" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+
+      <input type="text" id="school12" placeholder="12th School Name" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+      <input type="number" id="percent12" placeholder="12th Percentage" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+
+      <label class="block text-gray-300 mt-2">Graduate?</label>
+      <select id="graduate" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+
+      <!-- Graduation Details -->
+      <div id="gradDetails" class="hidden space-y-3 mt-3">
+        <input type="text" id="course" placeholder="Course (e.g., B.Tech)" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+        <input type="text" id="branch" placeholder="Branch (e.g., Computer Science)" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+        <input type="number" id="gradPercent" placeholder="Graduation Percent / CGPA" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+      </div>
+
+      <!-- Skills & Experience -->
+      <input type="text" id="skills" placeholder="Skills (comma separated)" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
+      <textarea id="experience" rows="3" placeholder="Internship / Work Experience" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700"></textarea>
+      <textarea id="projects" rows="3" placeholder="Key Projects" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700"></textarea>
+      <input type="url" id="portfolio" placeholder="LinkedIn / Portfolio / GitHub" class="w-full px-4 py-2 rounded-lg border border-gray-700 bg-gray-800">
+
+      <!-- Generate Button -->
+      <button type="submit" class="w-full py-3 mt-4 bg-gradient-to-r from-pink-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition transform">
+        Generate Resume
+      </button>
+    </form>
+  </div>
+
+  <!-- Resume Section -->
+  <div id="resumeSection" class="hidden w-full max-w-3xl bg-white text-black p-8 rounded-2xl shadow-lg relative">
+
+    <div id="resumeContent">
+      <h1 class="text-3xl font-bold" id="rName">Full Name</h1>
+      <p id="rEmail">Email: example@email.com</p>
+      <p id="rPhone">Phone: </p>
+      <p id="rLocation">Location: </p>
+      <hr class="my-4">
+
+      <h2 class="text-xl font-semibold">Education</h2>
+      <p id="r10">10th: </p>
+      <p id="r12">12th: </p>
+      <p id="rGrad">Graduation: </p>
+
+      <h2 class="text-xl font-semibold mt-4">Skills</h2>
+      <p id="rSkills">- </p>
+
+      <h2 class="text-xl font-semibold mt-4">Experience</h2>
+      <p id="rExperience">- </p>
+
+      <h2 class="text-xl font-semibold mt-4">Projects</h2>
+      <p id="rProjects">- </p>
+
+      <h2 class="text-xl font-semibold mt-4">Portfolio</h2>
+      <p id="rPortfolio">- </p>
+    </div>
+
+    <button onclick="downloadPDF()" class="w-full py-3 mt-6 bg-green-600 text-white font-semibold rounded-lg shadow-lg hover:scale-105 transition transform">
+      Download Resume (PDF)
+    </button>
+  </div>
+
+</body>
+</html>
